@@ -1,6 +1,6 @@
-require "combine_errors/version"
+require "combined_errors/version"
 
-module CombineErrors
+module CombinedErrors
   module Model
     def combine_errors new_method, *methods_to_combine
       define_method new_method do
@@ -19,5 +19,5 @@ module CombineErrors
 end
 
 if defined?(ActiveRecord)
-  ActiveRecord::Base.extend CombineErrors::Model
+  ActiveRecord::Base.extend CombinedErrors::Model
 end

@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'combine_errors/version'
+require 'combined_errors/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "combine_errors"
-  spec.version       = CombineErrors::VERSION
+  spec.name          = "combined_errors"
+  spec.version       = CombinedErrors::VERSION
   spec.authors       = ["Mark Sim"]
   spec.email         = ["mark@blog.quarternotecoda.com"]
-  spec.description   = %q{Combine ActiveRecord errors into a new single property}
-  spec.summary       = %q{Combine ActiveRecord errors into a new single property}
+  spec.description   = %q{Combine Model errors into a new single property for use with gems like SimpleForm}
+  spec.summary       = %q{Combine Model errors into a new single property}
   spec.homepage      = ""
   spec.license       = "MIT"
 

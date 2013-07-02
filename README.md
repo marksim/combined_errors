@@ -1,4 +1,4 @@
-# Combine Errors
+# Combined Errors
 
 Sometimes you want to use SimpleForm and have 2 or 3 inputs on the same line.  Like with an address.
 
@@ -28,7 +28,7 @@ But it would be nice if the errors still stacked up nicely.  That's where Combin
 
 Add this line to your application's Gemfile:
 
-    gem 'combine_errors'
+    gem 'combined_errors'
 
 And then execute:
 
@@ -36,7 +36,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install combine_errors
+    $ gem install combined_errors
 
 ## Contributing
 

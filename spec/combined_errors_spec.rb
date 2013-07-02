@@ -1,8 +1,8 @@
 require 'rspec'
-require './lib/combine_errors'
+require './lib/combined_errors'
 
 class TestModel
-  extend CombineErrors::Model
+  extend CombinedErrors::Model
   attr_accessor :property1, :property2
   attr_reader :errors
   def initialize
@@ -15,7 +15,7 @@ class TestModel
   end
 end
 
-describe CombineErrors::Model do
+describe CombinedErrors::Model do
   context "combine_errors" do
     class TestModel
       combine_errors :two_properties, :property1, :property2
