@@ -6,7 +6,7 @@ module CombinedErrors
       define_method new_method do
         methods_to_combine.flatten.each do |m|
           if errors[m].any?
-            title = m.to_s.respond_to?(:titleize) ? m.titleize : m.capitalize
+            title = m.to_s.respond_to?(:titleize) ? m.to_s.titleize : m.to_s.capitalize
             errors[m].each do |error|
               errors.add(new_method, "#{title} #{error}")
             end
