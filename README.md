@@ -7,7 +7,7 @@ Sometimes you want to use SimpleForm and have 2 or 3 inputs on the same line.  L
         = f.input :name
         = f.input :address_line_1
         = f.input :address_line_2
-        = f.input :city_state_zip do
+        = f.input :city_state_zip, label: 'City' do
           = f.input_field :city, class: 'input-medium'
           = f.input_field :state, collection: State.all
           = f.input_field :zip, class: 'input-small'
@@ -24,6 +24,7 @@ But it would be nice if the errors still stacked up nicely.  That's where Combin
       combine_errors :city_state_zip, [:city, :state, :zip]
     end
 
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -37,6 +38,17 @@ And then execute:
 Or install it yourself as:
 
     $ gem install combined_errors
+
+## Usage
+
+You probably want to adjust <code>config.error_method</code> in <code>config/initializer/simple_form.rb</code> to be <code>:to_sentence</code>
+
+You can make this work without ActiveRecord by:
+
+* extending <code>CombinedErrors::Model</code>
+* making an 'errors' method that returns an object which
+    - responds to <code>[]</code> like a hash
+    - responds to <code>add(key, message)</code>
 
 ## Contributing
 
